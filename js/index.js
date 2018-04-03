@@ -53,9 +53,7 @@
     let obj=menus[0];
     lab.forEach(function(ele,index){
         ele.onmouseenter=function(){
-            // obj.style.display="none";
             menus[index].style.display="block";
-            // obj=menus[index];
         }
         ele.onmouseleave=function(){
             menus[index].style.display="none";
@@ -74,7 +72,7 @@
             topBar.style.display="none";
         }
 
-        if(st>1000){
+        if(st>1000&&st<12400){
             leftBar.style.display="block";
         }else{
             leftBar.style.display="none";
@@ -147,5 +145,60 @@
             }
             document.documentElement.scrollTop=st;
         },25)
+    }
+}
+//右侧导航弹出文字
+{
+
+    let piaofu1=document.querySelectorAll(".piaofu1");
+    let rightBan1=document.querySelectorAll(".rightBan_1");
+    rightBan1.forEach(function (ele,index) {
+        ele.onmouseenter=function () {
+            piaofu1[index].style.opacity=1;
+            piaofu1[index].style.marginRight=0;
+        }
+        ele.onmouseleave=function () {
+            piaofu1[index].style.opacity=0;
+            piaofu1[index].style.marginRight=50+"px";
+        }
+    })
+}
+//天猫超市
+{
+    let containerLeft=document.querySelectorAll(".containerFBRight_1Top_Left");
+    let conBottomZong=document.querySelectorAll(".conBottomZong");
+    let banner2=document.querySelector(".containerFour_bottomRight_1Z");
+    containerLeft.forEach(function (ele,index) {
+        ele.onmouseenter=function () {
+            for(let i=0;i<containerLeft.length;i++){
+                containerLeft[i].classList.remove("active");
+                conBottomZong[i].classList.remove("active");
+            }
+            this.classList.add("active");
+            conBottomZong[index].classList.add("active");
+        }
+    })
+    let n=0;
+    let t=setInterval(moveTwo,3000)
+    function moveTwo(){
+        n++;
+        if(n===containerLeft.length){
+            n=0;
+        }
+        if(n<0){
+            n=containerLeft.length-1;
+        }
+        for(let i=0;i<containerLeft.length;i++){
+            containerLeft[i].classList.remove("active");
+            conBottomZong[i].classList.remove("active");
+        }
+        containerLeft[n].classList.add("active");
+        conBottomZong[n].classList.add("active");
+    }
+    banner2.onmouseenter=function () {
+        clearInterval(t);
+    }
+    banner2.onmouseleave=function () {
+        t=setInterval(moveTwo,3000)
     }
 }

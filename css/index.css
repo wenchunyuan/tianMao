@@ -38,7 +38,7 @@
     height: 35px;
      /*background-color: pink;*/
     float: right;
-    padding-right: 10px;
+    padding-right: 35px;
 }
 .daohang_word{
     font-size: 12px;
@@ -187,6 +187,8 @@
     line-height: 38px;
     text-align: center;
     font-weight: bold;
+    outline: none;
+    border-style: none;
 }
 .sousuo_bottom{
     width: 540px;
@@ -592,6 +594,7 @@
     height:269px;
     margin-top: 20px;
     /*background: pink;*/
+    margin-left: 0;
 }
 .containerFir_item{
     width: 238px;
@@ -658,6 +661,10 @@
     float: right;
     margin-right: 3px;
     cursor: pointer;
+    margin-right: 10px;
+}
+.containerSec_tubiaoB{
+    margin-right: 25px;
 }
 .containerSec_item1_bottom{
     width: 100%;
@@ -735,6 +742,48 @@
 .container_three_item:hover .container_three_hover{
     opacity: 1;
 }
+.containerThree_item_last{
+    width: 122px;
+    height: 108px;
+    background: #fff;
+    float: left;
+    border-bottom: 1px solid #dbdada;
+    border-right: 1px solid #dbdada;
+    position: relative;
+    cursor: pointer;
+    color: #999;
+}
+.containerThree_h{
+    font-family: 'iconfont';
+    text-align: center;
+    font-size: 36px;
+    margin-top: 28px;
+}
+.containerThree_item_last span{
+    font-size: 16px;
+    margin-left: 40px;
+    /*transform: rotate(360deg);*/
+}
+.containerThree_item_last:hover{
+    background: red;
+    color: #fff;
+}
+.containerThree_item_last:hover .containerThree_item_last span{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container_four{
     width: 1230px;
     height: 665px;
@@ -761,16 +810,19 @@
     /*background: skyblue;*/
     float: right;
     margin-top: 15px;
+    margin-right: 30px;
 }
 .container_four_topRight a{
     font-size: 14px;
     color: #333;
     margin-left: 10px;
-    line-height: 31px;
-    padding-bottom: 3px;
+    line-height: 25px;
+    display: block;
+    float: left;
 }
 .container_four_topRight a:hover{
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    border-bottom: 1px solid #999;
 }
 .container_four_bottom{
     width: 100%;
@@ -863,6 +915,7 @@
     color: #000;
     text-align: center;
     line-height: 57px;
+    cursor: pointer;
 }
 .containerFBRight_1Top_Left.active{
     background: #00b262;
@@ -874,12 +927,24 @@
     background: #fff;
     position: relative;
 }
+.conBottomZong{
+    width: 100%;
+    height: 225px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.conBottomZong.active{
+    z-index: 9999;
+}
 .containerFour_jiantou{
     height: 87px;
     width: 291px;
     background-image: url("../img/content/four_jiantou.png");
     position: absolute;
     top:75px;
+    left: 0;
     z-index: 999;
     cursor: pointer;
 }
@@ -1263,7 +1328,7 @@
 .topBar_main_3{
     width: 120px;
     height: 34px;
-    background:#d42f3e;
+    background: #d45761;
     float: left;
     margin-top: 6px;
 
@@ -1300,7 +1365,7 @@
     font-size: 12px;
 }
 .tips.active{
-    background: #ff6700;
+    background: #ff37bb;
     color: #fff;
 }
 .leftBar_footer_1{
@@ -1350,7 +1415,7 @@
     height: 35px;
     background: #000;
     font-family: 'iconfont';
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     line-height: 35px;
     color: #e7e5e5;
@@ -1386,7 +1451,7 @@
 }
 .rightBan_2_1ine2{
     margin-bottom: 0px;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 .rightBan_1_color{
     width: 35px;
@@ -1419,6 +1484,56 @@
     left: 0;
     bottom: 0;
 }
-.right_piao1{
-
+.rightB_four{
+    position: absolute;
+    left: 0;
+    top: 52%;
+}
+.rightB_fir1{
+    position: absolute;
+    right: 25px;
+    top: 28%;
+}
+.rightB_four1{
+    position: absolute;
+    right: 25px;
+    top: 52%;
+}
+.rightB_thr1{
+    position: absolute;
+    right: 25px;
+    bottom: 0;
+}
+.piaofu1{
+    width:100px;
+    height: 35px;
+    background-image: url("../img/qipao.png");
+    font-size: 10px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+    margin-right: 50px;
+    position: relative;
+}
+.piaofu2{
+    margin-right: 0px;
+}
+.piaofu1 img{
+    width: 100px;
+    height: 35px;
+}
+.piaofu_erweima{
+    width: 154px;
+    height: 207px;
+    background-image: url("../img/erWeiMaBackground.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.piaofu_erweima img{
+    width: 144px;
+    height: 144px;
+    margin-top: 50px;
 }
